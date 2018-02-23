@@ -1,2 +1,5 @@
 # node-numsum
-Calculate the sum for given numbers.
+> Calculate the sum for given numbers.
+
+## License
+[MIT](LICENSE)
