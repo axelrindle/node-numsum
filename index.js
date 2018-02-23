@@ -1,6 +1,9 @@
 /**
  * Calculate the sum for given numbers.
  * @module numsum
+ * @version 1.0.0
+ * @copyright 2018 Axel Rindle <axel.rindle@gmx.de>
+ * @author Axel Rindle <axel.rindle@gmx.de>
  * @license MIT
  */
 'use strict';
@@ -17,6 +20,7 @@ const roundTo = require('round-to');
  * @returns {array} An array with all nested arrays removed.
  *
  * @see https://stackoverflow.com/a/43892140/5423625
+ * @since 1.0.0
  */
 const flatten = arr => arr.reduce((acc, next) => acc.concat(Array.isArray(next) ? flatten(next) : next), []);
 
@@ -28,6 +32,8 @@ const flatten = arr => arr.reduce((acc, next) => acc.concat(Array.isArray(next) 
  * @param {number} precision The mathematical precision.
  *
  * @returns {number} The rounded number.
+ *
+ * @since 1.0.0
  */
 exports.round = (number, precision = 1) => {
   return roundTo(number, precision);
@@ -39,7 +45,9 @@ exports.round = (number, precision = 1) => {
  *
  * @param {array} nums An array of numbers.
  *
- * @returns {type} The sum of all given numbers.
+ * @returns {number} The sum of all given numbers.
+ *
+ * @since 1.0.0
  */
 exports.sum = (...nums) => {
   // Check for arguments
@@ -60,10 +68,12 @@ exports.sum = (...nums) => {
 /**
  * range - Calculates the sum of all numbers in the given range (both inclusive).
  *
- * @param {type} from The start index.
- * @param {type} to   The end index.
+ * @param {number} from The start index.
+ * @param {number} to   The end index.
  *
  * @returns {number} The calculated sum.
+ *
+ * @since 1.0.0
  */
 exports.range = (from, to) => {
   let sum = 0;
@@ -80,6 +90,7 @@ exports.range = (from, to) => {
  * @returns {number} The expected value.
  *
  * @see https://en.wikipedia.org/wiki/Expected_value
+ * @since 1.0.0
  */
 const mi = exports.mi = (dists) => {
   let mi = 0;
@@ -103,6 +114,7 @@ const mi = exports.mi = (dists) => {
  * @returns {number} The variance value.
  *
  * @see https://en.wikipedia.org/wiki/Variance
+ * @since 1.0.0
  */
 exports.variance = (dists) => {
   let _mi = mi(dists);

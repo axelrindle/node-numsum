@@ -1,0 +1,242 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+      index.js - Documentation
+  </title>
+
+  <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+  <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+
+  
+
+  <!-- start Mixpanel -->
+  <script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+  0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+  for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+  mixpanel.init("1919205b2da72e4da3b9b6639b444d59");</script>
+  <!-- end Mixpanel -->
+</head>
+
+<body>
+  <svg style="display: none;">
+    <defs>
+      <symbol id="linkIcon" fill="#706d77" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger" class="navicon-button x">
+    <div class="navicon"></div>
+  </label>
+
+  <label for="nav-trigger" class="overlay"></label>
+
+  <div class="top-nav-wrapper">
+    <ul>
+      <li >
+        <a href="index.html">
+          
+            <svg fill="#6D6D6D" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          
+          
+        </a>
+      </li>
+
+      
+
+    </ul>
+  </div>
+
+  <nav>
+    <h3 class="reference-title">
+      node-numsum API documentation
+    </h3>
+
+    <h3>Modules</h3><ul><li id="numsum-nav"><a href="module-numsum.html">numsum</a><ul class='methods'><li data-type="method" id="numsum-range-nav"><a href="module-numsum.html#.range">range</a></li><li data-type="method" id="numsum-round-nav"><a href="module-numsum.html#.round">round</a></li><li data-type="method" id="numsum-sum-nav"><a href="module-numsum.html#.sum">sum</a></li><li data-type="method" id="numsum-variance-nav"><a href="module-numsum.html#.variance">variance</a></li><li data-type="method" id="numsum-flatten-nav"><a href="module-numsum.html#~flatten">flatten</a></li></ul></li></ul>
+  </nav>
+
+  <div id="main">
+    
+      <h1 class="page-title">
+        index.js
+      </h1>
+    
+
+    
+      
+
+<section>
+  <article>
+    <pre class="prettyprint source linenums"><code>/**
+ * Calculate the sum for given numbers.
+ * @module numsum
+ * @version 1.0.0
+ * @copyright 2018 Axel Rindle &lt;axel.rindle@gmx.de>
+ * @author Axel Rindle &lt;axel.rindle@gmx.de>
+ * @license MIT
+ */
+'use strict';
+
+// Require modules
+const roundTo = require('round-to');
+
+/**
+ * flatten - Removes all nested arrays from an array and stores the values from
+ * the nested array in the top-level array.
+ *
+ * @param {array} arr An array which contains nested arrays.
+ *
+ * @returns {array} An array with all nested arrays removed.
+ *
+ * @see https://stackoverflow.com/a/43892140/5423625
+ * @since 1.0.0
+ */
+const flatten = arr => arr.reduce((acc, next) => acc.concat(Array.isArray(next) ? flatten(next) : next), []);
+
+
+/**
+ * round - Round a number to a specific number of decimal places.
+ *
+ * @param {number} number    The number to round.
+ * @param {number} precision The mathematical precision.
+ *
+ * @returns {number} The rounded number.
+ *
+ * @since 1.0.0
+ */
+exports.round = (number, precision = 1) => {
+  return roundTo(number, precision);
+};
+
+/**
+ * sum - Calcualtes the sum of the given numbers. This might be an array or multiple
+ * parameters of numbers.
+ *
+ * @param {array} nums An array of numbers.
+ *
+ * @returns {number} The sum of all given numbers.
+ *
+ * @since 1.0.0
+ */
+exports.sum = (...nums) => {
+  // Check for arguments
+  if (nums.length &lt; 1) return 0;
+
+  // Flatten array
+  nums = flatten(nums);
+
+  // Calculate sum
+  let sum = 0;
+  for (let num of nums) sum += num;
+
+  // Return
+  return sum;
+};
+
+
+/**
+ * range - Calculates the sum of all numbers in the given range (both inclusive).
+ *
+ * @param {number} from The start index.
+ * @param {number} to   The end index.
+ *
+ * @returns {number} The calculated sum.
+ *
+ * @since 1.0.0
+ */
+exports.range = (from, to) => {
+  let sum = 0;
+  for (var i = from; i &lt;= to; i++) sum += i;
+  return sum;
+};
+
+
+/**
+ * mi - Calculates the expected value for a probability distribution.
+ *
+ * @param {array} dists The probability distribution.
+ *
+ * @returns {number} The expected value.
+ *
+ * @see https://en.wikipedia.org/wiki/Expected_value
+ * @since 1.0.0
+ */
+const mi = exports.mi = (dists) => {
+  let mi = 0;
+
+  for (let dist of dists) {
+    let x = dist.x;
+    let p = dist.p;
+
+    mi += x * p;
+  }
+
+  return mi;
+}
+
+
+/**
+ * variance - Calculates the variance for a probability distribution.
+ *
+ * @param {array} dists The probability distribution.
+ *
+ * @returns {number} The variance value.
+ *
+ * @see https://en.wikipedia.org/wiki/Variance
+ * @since 1.0.0
+ */
+exports.variance = (dists) => {
+  let _mi = mi(dists);
+  let variance = 0;
+
+  for (let dist of dists) {
+    let x = dist.x;
+    let p = dist.p;
+
+    variance += ( (x - _mi) * (x - _mi) ) * p;
+  }
+
+  return variance;
+};
+</code></pre>
+  </article>
+</section>
+
+    
+
+
+  </div>
+
+  <br class="clear">
+
+  <footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
+  </footer>
+
+  <script src="scripts/linenumber.js"></script>
+  <script src="scripts/pagelocation.js"></script>
+
+  
+  
+</body>
+</html>

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "ava --verbose",
-    "jsdoc": "rm -rf docs/ && jsdoc -c .jsdoc.conf -t ./node_modules/jsdoc-template/ -R README.md -d docs index.js"
+    "jsdoc": "jsdoc -c .jsdoc.conf -t ./node_modules/jsdoc-template/ -R README.md -d docs index.js"
   },
   "repository": {
     "type": "git",
