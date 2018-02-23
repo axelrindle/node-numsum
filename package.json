@@ -1,0 +1,34 @@
+{
+  "name": "numsum",
+  "version": "1.0.0",
+  "description": "Calculate the sum for given numbers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava --verbose",
+    "jsdoc": "rm -rf docs/ && jsdoc -c .jsdoc.conf -t ./node_modules/jsdoc-template/ -R README.md -d docs index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axelrindle/node-numsum.git"
+  },
+  "keywords": [
+    "numbers",
+    "math",
+    "sum",
+    "calculate"
+  ],
+  "author": "Axel Rindle <axel.rindle@gmx.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/axelrindle/node-numsum/issues"
+  },
+  "homepage": "https://github.com/axelrindle/node-numsum#readme",
+  "dependencies": {
+    "round-to": "^2.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "jsdoc": "^3.5.5",
+    "jsdoc-template": "git+https://github.com/braintree/jsdoc-template.git"
+  }
+}
