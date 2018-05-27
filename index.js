@@ -10,19 +10,7 @@
 
 // Require modules
 const roundTo = require('round-to');
-
-/**
- * flatten - Removes all nested arrays from an array and stores the values from
- * the nested array in the top-level array.
- *
- * @param {array} arr An array which contains nested arrays.
- *
- * @returns {array} An array with all nested arrays removed.
- *
- * @see https://stackoverflow.com/a/43892140/5423625
- * @since 1.0.0
- */
-const flatten = arr => arr.reduce((acc, next) => acc.concat(Array.isArray(next) ? flatten(next) : next), []);
+const flatten = require('flatten');
 
 
 /**
