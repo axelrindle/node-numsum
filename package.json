@@ -33,6 +33,6 @@
   "devDependencies": {
     "ava": "^0.25.0",
     "jsdoc": "^3.5.5",
-    "jsdoc-template": "git+https://github.com/braintree/jsdoc-template.git"
+    "jsdoc-template": "^1.2.0"
   }
 }
