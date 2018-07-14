@@ -1,5 +1,6 @@
 /**
- * Calculate the sum for given numbers.
+ * Some mathematical utilities.
+ *
  * @module numsum
  * @version 1.0.0
  * @copyright 2018 Axel Rindle <axel.rindle@gmx.de>

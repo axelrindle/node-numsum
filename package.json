@@ -1,7 +1,7 @@
 {
   "name": "numsum",
   "version": "1.0.0",
-  "description": "Calculate the sum for given numbers.",
+  "description": "Some mathematical utilities.",
   "main": "index.js",
   "scripts": {
     "test": "ava --verbose",

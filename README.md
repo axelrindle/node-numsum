@@ -1,5 +1,5 @@
 # node-numsum
-> Calculate the sum for given numbers.
+> Some mathematical utilities.
 
 ## Install
 ```bash
