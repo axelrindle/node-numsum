@@ -92,7 +92,7 @@ const mi = exports.mi = (dists) => {
   }
 
   return mi;
-}
+};
 
 
 /**
