@@ -28,7 +28,7 @@
   "homepage": "https://github.com/axelrindle/node-numsum#readme",
   "dependencies": {
     "flatten": "^1.0.2",
-    "round-to": "^2.0.0"
+    "round-to": "^3.0.0"
   },
   "devDependencies": {
     "ava": "^0.25.0",
