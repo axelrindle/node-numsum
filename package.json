@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Some mathematical utilities.",
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "test": "ava --verbose",
     "jsdoc": "jsdoc -c .jsdoc.conf -t ./node_modules/jsdoc-template/ -R README.md -d docs index.js"
